@@ -1,3 +1,4 @@
+import 'package:chat_ui/widgets/favorite_contacts.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/category_selector.dart';
@@ -41,13 +42,17 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
-                  borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(30.0),
-                      topRight: Radius.circular(30.0),
-                      ),
-                      ),
-                      
+                color: Theme.of(context).accentColor,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
+                ),
+              ),
+              child: Column(
+                children: [
+                  FavoriteContacts(),
+                ],
+              ),
             ),
           ),
         ],
